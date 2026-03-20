@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: #FAF6EF;
+    color: #3B2A1A;
+    font-family: 'Lora', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1A1008;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-white px-6 py-2.5 rounded-full font-sans font-medium text-sm tracking-wide transition-all duration-200 hover:bg-gold-dark hover:shadow-warm;
+  }
+
+  .btn-outline {
+    @apply border border-gold text-gold px-6 py-2.5 rounded-full font-sans font-medium text-sm tracking-wide transition-all duration-200 hover:bg-gold hover:text-white;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-warm transition-all duration-300;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl md:text-4xl text-ink mb-2;
+  }
+
+  .section-subtitle {
+    @apply font-body text-brown-lighter mb-8 italic;
+  }
+
+  .badge {
+    @apply inline-block text-xs font-sans font-medium px-3 py-1 rounded-full tracking-wide;
+  }
+
+  .prose-literary {
+    @apply font-body text-brown leading-relaxed text-lg;
+  }
+
+  .prose-literary h2 {
+    @apply font-heading text-2xl text-ink mt-8 mb-4;
+  }
+
+  .prose-literary h3 {
+    @apply font-heading text-xl text-ink mt-6 mb-3;
+  }
+
+  .prose-literary p {
+    @apply mb-5;
+  }
+
+  .prose-literary blockquote {
+    @apply border-l-4 border-gold pl-5 italic text-brown-lighter my-6;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A84C;
+  border-radius: 3px;
+}
